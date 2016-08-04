@@ -35,10 +35,6 @@ router.post('/', function(req,res){
     }
   knex('posts')
     .insert(newPost)
-    // .insert([{content: req.body.content}, {author_id: req.body.author}])
-    .then (function() {
-      //console.log("this is the new rant: ", newPost)
-      })
     .catch(logError)
   res.redirect('/rants')
   })

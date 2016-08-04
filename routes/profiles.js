@@ -30,8 +30,8 @@ router.get('/new', function(req, res) {
 router.post('/', function(req,res){
   var newProfile = {
     botName: req.body.name,
-    photoURL: req.body.photo
-    // bio: req.body.bio
+    photoURL: req.body.photo,
+    bio: req.body.bio
     }
   knex('profiles')
     .insert(newProfile)
