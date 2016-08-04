@@ -12,35 +12,33 @@ function logError (err) {
   console.log('Bother: ', err)
 }
 
-//this is the bit for getting the list of posts page
+//this is the bit for getting the list of profiles page
 router.get('/', function(req, res) {
-  knex.from ('posts')
-    .innerJoin('profiles', 'profiles.post_id', 'posts.author_id' )
+  knex('profiles')
     .then (function (data){
-    res.render('botposts', {posts: data})
+    res.render('botprofiles', {profiles: data})
     })
     .catch(logError)
 })
 
-//shows the 'add a new post' page
+//shows the 'add a new profile' page
 router.get('/new', function(req, res) {
-  res.render('newRant')
+  res.render('newProfile')
   })
 
 //saving the new rant into the posts table, then displays the rant list page
 router.post('/', function(req,res){
-  var newPost = {
-    content: req.body.content,
-    author_id: req.body.author
+  var newProfile = {
+    botName: req.body.name,
+    photoURL: req.body.photo
+    // bio: req.body.bio
     }
-  knex('posts')
-    .insert(newPost)
-    // .insert([{content: req.body.content}, {author_id: req.body.author}])
-    .then (function() {
-      //console.log("this is the new rant: ", newPost)
-      })
+  knex('profiles')
+    .insert(newProfile)
+    // .then (function() {
+    // })
     .catch(logError)
-  res.redirect('/rants')
+  res.redirect('/profiles')
   })
 
 module.exports = router;
