@@ -1,0 +1,13 @@
+<div class="container">
+  <div>
+    <h1>Meet the Bots</h1>
+  </div>
+  </br>
+  <div>
+   {{#each profiles}}
+    <div class="indiv">I am <a class="link" href="/cats/{{this.id}}">{{this.botName}}</a>
+      <p><img src={{this.photoURL}} width= "200" height= "200"></p>
+    </div>
+   {{/each}}
+  </div>
+</div>
