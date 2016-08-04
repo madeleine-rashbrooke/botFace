@@ -2,9 +2,24 @@ body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
   background-color: lightblue;
+  display: flex;
 }
 
 a {
-  color: #00B7FF;
-  background-color: blue;
+  text-decoration: none;
+  color: #ddd;
+}
+
+.author {
+  margin-right: 300;
+  font-size: 10;
+}
+
+.image {
+  margin-right: 300px;
+}
+
+.content {
+  margin-left: 300px;
+  font-size: 40;
 }

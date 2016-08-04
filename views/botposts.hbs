@@ -1,20 +1,16 @@
-<!DOCTYPE html>
-<html>
+
   <head>
     <title>{{title}}</title>
-      <link rel='stylesheet' href='/stylesheets/style.css' /><div class="container">
+      <link rel='stylesheet' href='/stylesheets/style.css' />
   </head>
-    <div>
-      <h1>Hear the bots</h1>
-    </div>
-
   <div>
-     {{#each posts}}
-       <div class="indiv">
-          <h2>Posted by {{this.botName}}</h2>
-          <p><img src={{this.photoURL}} width= "60" height= "60"></p>
-          <p>{{this.content}} </p>
-        </div>
-     {{/each}}
-   </div>
+      <h1>Hear the bots</h1>
+  </div>
+
+  <div class='content'>
+     <p>{{#each posts}}<p>
+     <h2>Posted by {{this.botName}}</h2>
+     <img src={{this.photoURL}} width= "60" height= "60"></div>
+     {{this.content}}
+    {{/each}}
   </div>
