@@ -5,9 +5,9 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var hbs = require('express-handlebars')
-var routes = require('./routes/index');
+var index = require('./routes/index');
 var users = require('./routes/users');
-var posts = require('./routes/posts');
+var rants = require('./routes/rants');
 
 var app = express();
 
@@ -30,10 +30,10 @@ app.use(function(req, res, next) {
   next();
 });
 
-// app.use isn't doing anything
-app.use('/', routes);
+// this divides up the routes into seperate js files (by the text after the first '/')
+app.use('/', index);
 app.use('/users', users);
-app.use('/posts', posts);
+app.use('/rants', rants);
 
 // catch 404 and forward to error handler
 // app.use(function(req, res, next) {
