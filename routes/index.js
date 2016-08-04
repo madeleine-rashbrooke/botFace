@@ -22,4 +22,15 @@ router.get('/botprofiles', function(req, res) {
     .catch(logError)
 })
 
+router.get('/posts', function(req, res) {
+  //res.send("testing router")
+  knex.from ('posts')
+    .innerJoin('profiles', 'profiles.post_id', 'posts.author_id' )
+    .then (function (data){
+    res.render('botposts', {posts: data})
+    })
+    .catch(logError)
+})
+
+
 module.exports = router;

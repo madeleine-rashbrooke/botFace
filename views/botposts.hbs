@@ -1,0 +1,20 @@
+<div class="container">
+  <div>
+    <h1>Hear the bots</h1>
+  </div>
+  </br>
+  <div>
+   {{#each posts}}
+    <div class="indiv">
+      <h2>Post number is {{this.id}}</h2>
+      <p>This is the author id {{this.author_id}}</p>
+      <p>This is the profiles id {{this.id}}</p>
+      <p>This is the name of the bot    {{this.botName}} </p>
+
+    <p>Content goes here: {{this.content}} </p>
+
+      <p><img src={{this.photoURL}} width= "20" height= "20"></p>
+    </div>
+   {{/each}}
+  </div>
+</div>
