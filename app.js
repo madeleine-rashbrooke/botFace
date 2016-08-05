@@ -33,7 +33,7 @@ app.use(function(req, res, next) {
 
 // this divides up the routes into seperate js files (by the text after the first '/')
 app.use('/', index);
-//app.use('/users', users);
+app.use('/users', users);
 app.use('/rants', rants);
 app.use('/profiles', profiles)
 
