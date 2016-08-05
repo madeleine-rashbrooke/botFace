@@ -3,16 +3,30 @@
   <title>{{title}}</title>
     <link rel='stylesheet' href='/stylesheets/style.css' /><div class="container">
 </head>
-<div class="container">
+<div>
+    <h1>Meet the Bots</h1>
+</div>
+<!-- <div class='container'> -->
+  <div class="content">
+    {{#each profiles}}
+    <div class="indivPost">
+      <img src={{this.photoURL}}>
+      <p class = 'bio'>Hi I'm {{this.botName}}. {{this.bio}}</p>
+    </div>
+    {{/each}}
+  </div>
+
+<!-- <div class="container">
   <div>
     <h1>Meet the Bots</h1>
   </div>
   </br>
   <div>
-   {{#each profiles}}
-    <div class="indiv">I am <a class="link" href="/cats/{{this.id}}">{{this.botName}}</a>
-      <p><img src={{this.photoURL}} width= "200" height= "200"></p>
+   {{#each profiles}} -->
+    <!-- <div class="indiv">I am <a class="link" href="/cats/{{this.id}}">{{this.botName}}</a> -->
+      <!-- <p>
+      <img src={{this.photoURL}}></p>
     </div>
    {{/each}}
   </div>
-</div>
+</div> -->
