@@ -1,13 +1,23 @@
-<div class="container">
-  <div>
+
+<head>
+  <title>Meet the Bots</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' /><div class="container">
+      <nav>
+         <a href="/rants/">rants</a> |
+         <a href="/profiles/">profiles</a> |
+         <a href="/rants/new">New Rant</a> |
+         <a href="/profiles/new">New Profile</a>
+      </nav>
+</head>
+<div>
     <h1>Meet the Bots</h1>
-  </div>
-  </br>
-  <div>
-   {{#each profiles}}
-    <div class="indiv">I am <a class="link" href="/cats/{{this.id}}">{{this.botName}}</a>
-      <p><img src={{this.photoURL}} width= "200" height= "200"></p>
-    </div>
-   {{/each}}
-  </div>
 </div>
+<!-- <div class='container'> -->
+  <div class="content">
+    {{#each profiles}}
+    <div class="indivPost">
+      <img src={{this.photoURL}}>
+      <p class = 'bio'>Hi I'm {{this.botName}}. {{this.bio}}</p>
+    </div>
+    {{/each}}
+  </div>

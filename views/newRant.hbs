@@ -1,8 +1,19 @@
+
+<head>
+  <title>New Rant</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' /><div class="container">
+      <nav>
+         <a href="/rants/">rants</a> |
+         <a href="/profiles/">profiles</a> |
+         <a href="/rants/new">New Rant</a> |
+         <a href="/profiles/new">New Profile</a>
+      </nav>
+</head>
 <h1>Make a new post</h1>
 
   <form action="/rants" method="post">
 
-    Posted by: <input type="text" placeholder="author id number needs to go here" name="author" ><br>
+    Posted by: <input type="text" placeholder="author id number needs to go here" name="author" cols="8"><br>
     Content: <textarea placeholder="write your post here" name="content" rows="10" cols="80"></textarea><br>
     <input type="submit" value="Post it">
 
