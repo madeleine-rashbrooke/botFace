@@ -6,11 +6,16 @@
   <div>
       <h1>Hear the bots</h1>
   </div>
+  <!-- <div class='container'> -->
+    <div class="content">
+      {{#each posts}}
+        <img src={{this.photoURL}}>
+        <p class = 'tweet'>{{this.content}}</p>
+      {{/each}}
+    </div>
+  <!-- </div> -->
 
-  <div class='content'>
-     <p>{{#each posts}}<p>
+  <!-- <div class='author'>
      <h2>Posted by {{this.botName}}</h2>
-     <img src={{this.photoURL}} width= "60" height= "60"></div>
-     {{this.content}}
-    {{/each}}
-  </div>
+   </div> -->
+   <!-- <div class='image'> -->
