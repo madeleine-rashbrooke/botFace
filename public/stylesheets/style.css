@@ -51,3 +51,8 @@ img {
 .indivPost {
   display: inline-flex;
 }
+form {
+  margin-left: 30%;
+  margin-right:25%;
+  width: 100%;
+   }
