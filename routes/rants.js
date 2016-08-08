@@ -39,4 +39,11 @@ router.post('/', function(req,res){
   res.redirect('/rants')
   })
 
+router.delete('/:id', function(req, res, next) {
+  knex('posts')
+  .where("id", req.params.id)
+  .del()
+  .catch(logError)
+});
+
 module.exports = router;
